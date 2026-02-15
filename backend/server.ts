@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db";
 import coookieParser from "cookie-parser";
+import authRouter from "./routes/authRouter"
 
 const app: Application = express();
 
@@ -10,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 dotenv.config();
 app.use(coookieParser());
+app.use("/api/auth",authRouter);
 
 const PORT = process.env.PORT;
 
