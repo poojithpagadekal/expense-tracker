@@ -6,7 +6,6 @@ import {
   RegisterHandler,
 } from "../controllers/authController";
 
-import { authmiddlware } from "../middleware/authMiddleware";
 const router = express.Router();
 
 router.post("/register", RegisterHandler);
